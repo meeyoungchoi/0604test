@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8">
+    <title>버거상세조회</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="jumbotron">
+      <div class="container">
+        <p th:text="|재료: ${burger.name}|"></p>
+        <p th:text="|가격: ${burger.price}|"></p>
+        <ul th:each="ingredient: ${burger.ingredients}">
+          <li th:text="${ingredient.name}"></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
